@@ -8,6 +8,7 @@ const head = document.querySelector('header')
 const foot = document.querySelector('footer')
 const clickers = document.querySelectorAll('.btn')
 const banner = document.querySelector('.bannerBus')
+const pixs = document.querySelectorAll('img')
 
 
 
@@ -35,3 +36,20 @@ allPage.addEventListener('keydown', function(event){
 
 })
 
+2. //Buttons change color when clicked 
+ clickers.forEach(click => { 
+     click.addEventListener('click', function (event) { 
+        click.style.backgroundColor = 'red'
+        })
+})
+
+3. //Hide Banner 
+banner.addEventListener('dblclick', (event)=> { 
+    banner.style.display = 'none'
+})
+
+4. //Change Banner to boom-bus
+banner.addEventListener('mouseover', (event) => { 
+    banner.setAttribute('src', 'img/boom-bus.jpg')
+})
+   
