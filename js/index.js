@@ -5,7 +5,7 @@
 
 const allPage = document.querySelector('html')
 const head = document.querySelector('header')
-const foot = document.querySelector('footer')
+const bottom = document.querySelector('footer')
 const clickers = document.querySelectorAll('.btn')
 const banner = document.querySelector('.bannerBus')
 const pixs = document.querySelectorAll('.img')
@@ -57,8 +57,8 @@ window.addEventListener('load', function(event){
 })
 
 5.// Change color of footer with 'mouseover'// 
-foot.addEventListener('mouseover',function(event){ 
- foot.style.backgroundColor = '#17A2B8'
+bottom.addEventListener('mouseover',function(event){ 
+bottom.style.backgroundColor = '#17A2B8'
 })
 
 
