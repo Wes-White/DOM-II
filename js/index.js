@@ -12,9 +12,6 @@ const pixs = document.querySelectorAll('.img')
 const anchors = document.querySelector('.nav, a')
 
 
-
-
-
 //Event Listeners 
 
 1. // Dark Mode 
@@ -37,24 +34,7 @@ allPage.addEventListener('keydown', function(event){
 
 })
 
-2. // Buttons change color when clicked 
- clickers.forEach(click => { 
-     click.addEventListener('click', function (event) { 
-        click.style.backgroundColor = 'red'
-        })
-})
-
-3. // Hide Banner 
-banner.addEventListener('dblclick', (event)=> { 
-    banner.style.display = 'none'
-})
-
-4. // Change Banner to boom-bus
-banner.addEventListener('contextmenu', (event) => { 
-    banner.setAttribute('src', 'img/boom-bus.jpg')
-})
-   
-5. // Disappering images with mouseleave
+2. // Disappering images with mouseleave
 pixs.forEach(image => { 
     image.addEventListener('mouseleave', function(event){ 
         image.style.display = 'none'
@@ -62,17 +42,7 @@ pixs.forEach(image => {
     })
 })
 
-6. // Nav Anchors Talk With a Click 
-anchors.addEventListener('click', (event) => {
- alert("Ouch!! why did you poke me?")
-})
-
-7. //Log to Console when Window is Resized. 
-window.addEventListener('resize', (event) =>{
-    console.log('I hope this is Responsive....')
-})
-
-8. // Hide Text 
+3. // Hide Text 
 allPage.addEventListener('keyup', function(event){ 
     // let backDrop = 
     if(event.key == 't'){ 
@@ -81,9 +51,44 @@ allPage.addEventListener('keyup', function(event){
     }
 })
 
-9. // Alert User on Load 
-window.addEventListener('load', function (event){ 
+4. // Alert User on Load 
+window.addEventListener('load', function(event){ 
     alert("check out www.thebussauce.com for secret featurs of this site.")
 })
 
-10. // 
+5.// Change color of footer with 'mouseover'// 
+foot.addEventListener('mouseover',function(event){ 
+ foot.style.backgroundColor = '#17A2B8'
+})
+
+
+
+//Some with Arrow Functions 
+
+
+6. // Buttons change color when clicked 
+ clickers.forEach(click => { 
+     click.addEventListener('click', function (event) { 
+        click.style.backgroundColor = 'red'
+        })
+})
+
+7. // Hide Banner 
+banner.addEventListener('dblclick', (event)=> { 
+    banner.style.display = 'none'
+})
+
+8. // Change Banner to boom-bus on RightClick
+banner.addEventListener('contextmenu', (event) => { 
+    banner.setAttribute('src', 'img/boom-bus.jpg')
+})
+
+9. // Nav Anchors Talk With a Click 
+anchors.addEventListener('click', (event) => {
+ alert("Ouch!! why did you poke me?")
+})
+
+10. //Log to Console when Window is Resized. 
+window.addEventListener('resize', (event) =>{
+    console.log('I hope this is Responsive....')
+})
