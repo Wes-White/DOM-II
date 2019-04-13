@@ -9,6 +9,7 @@ const foot = document.querySelector('footer')
 const clickers = document.querySelectorAll('.btn')
 const banner = document.querySelector('.bannerBus')
 const pixs = document.querySelectorAll('img')
+const anchors = document.querySelector('.nav, a')
 
 
 
@@ -16,7 +17,7 @@ const pixs = document.querySelectorAll('img')
 
 //Event Listeners 
 
-1. //Dark Mode 
+1. // Dark Mode 
 allPage.addEventListener('keydown', function(event){
     if(event.key == 'd'){ 
     allPage.style.backgroundColor = 'black'
@@ -36,20 +37,38 @@ allPage.addEventListener('keydown', function(event){
 
 })
 
-2. //Buttons change color when clicked 
+2. // Buttons change color when clicked 
  clickers.forEach(click => { 
      click.addEventListener('click', function (event) { 
         click.style.backgroundColor = 'red'
         })
 })
 
-3. //Hide Banner 
+3. // Hide Banner 
 banner.addEventListener('dblclick', (event)=> { 
     banner.style.display = 'none'
 })
 
-4. //Change Banner to boom-bus
+4. // Change Banner to boom-bus
 banner.addEventListener('mouseover', (event) => { 
     banner.setAttribute('src', 'img/boom-bus.jpg')
 })
    
+5. // Disappering images with mouseleave
+pixs.forEach(image => { 
+    image.addEventListener('mouseleave', function(event){ 
+        image.style.display = 'none'
+        console.log('What did you do to the pictures??')
+    })
+})
+
+6. // Nav Anchors Talk With a Click 
+anchors.addEventListener('click', (object) => {
+ alert("Ouch!! why did you poke me?")
+})
+
+7. //Log to Console when Window is Resized. 
+window.addEventListener('resize', (object) =>{
+    console.log('I hope this is Responsive....')
+})
+    
